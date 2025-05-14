@@ -1,0 +1,25 @@
+import socket as sk;
+
+def serve_clients(sock: sk.socket):
+    print("Waiting on new client connection...")
+    conn, addr = sock.accept(); # waits for a client to connect
+    host, port = addr;
+    with conn:
+        print(f"New Client at address: {host}:{port}");
+        data = conn.recv(512); # read 512 bytes at a time from client
+        print("Data from client:", repr(data)); # converts bytes into ascii representation;
+    print("Client Disconnected")
+
+HOST = "127.0.0.1";
+PORT = 8080;
+
+def main():
+    with sk.socket(sk.AF_INET, sk.SOCK_STREAM) as sock:
+        sock.bind((HOST, PORT));
+        sock.listen(1); # we only want one connected client at a time
+        print(f"Listening on {HOST}:{PORT}")
+        serve_clients(sock);
+    print("Server Shutdown")
+
+if __name__ == "__main__":
+    main();
