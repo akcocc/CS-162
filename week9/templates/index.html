@@ -4,13 +4,19 @@
         <link rel="stylesheet" href="/static/styles.css"/>
     </head>
     <body>
-        <div class="header">
-            <a href="/"><button class="selected">Home</button></a>
-            <a href="/about"><button>About</button></a>
-        </div>
-        <h1>Home Page</h1>
-        <div class="row">
-            <p>This page is about the universe.</p>
+        <div id="current_screen">
+            <div class="header" id="header_tabs">
+                <a href="/"><button class="selected">Home</button></a>
+                <a href="/about"><button>About</button></a>
+            </div>
+            <h1>Home Page</h1>
+            <div class="row">
+                <div>
+                    <p>This page is about the universe.</p>
+                    <img src="/static/hubble-ultra-deep-field.webp" width=675px height=617px>
+                    <p><a href="https://science.nasa.gov/mission/hubble/science/universe-uncovered/hubble-deep-fields/" target="_blank">Image courtesy of <cite>NASA</cite></a></p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

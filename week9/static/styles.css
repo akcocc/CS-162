@@ -1,6 +1,9 @@
+/* I honestly just copy this style sheet between projects and tweak */
+
+
 :root {
     font-family: Roboto Mono, Vazirmatn, monospace;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
 
